@@ -1,0 +1,40 @@
+import java.util.Scanner;
+class vowel
+ {
+   public static void main(String args[])
+   { 
+  
+     Scanner ac=new Scanner(System.in);
+   System.out.println("Enter a character:");
+    char c=ac.next().charAt(0);
+   
+     switch(c) 
+{
+  case 'a':System.out.println(c+" is a vowel");
+   break;
+   case 'e': System.out.println(c+" is a vowel");
+       break;
+     
+     case 'i': System.out.println(c+" is a vowel");
+       break;
+     
+     case 'o': System.out.println(c+" is a vowel");
+       break;
+     
+     case 'u': System.out.println(c+" is a vowel");
+       break;
+     
+    default :  System.out.println(c+" is a consonant");
+      
+     }
+   }
+ }
+
+Output :
+Enter a character:
+t
+t is a consonant
+
+Enter a character:
+e
+e is a vowel
