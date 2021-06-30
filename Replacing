@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+ class replacing
+ {
+   public static void main(String args[])
+   { 
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter a number:");
+    Integer x=sc.nextInt();
+    System.out.println("Enter 2 values for replacing");
+   Integer y=sc.nextInt();
+   Integer z=sc.nextInt();
+    String s=x.toString();
+    String s1=y.toString();
+    String s2=z.toString();
+    String s3=s.replace(s1,s2);
+    System.out.println("After replacing: "+s3);
+    
+    
+   }
+ }
+
+Output :
+Enter a number:
+2021
+Enter 2 values for replacing
+2
+3
+After replacing: 3031
