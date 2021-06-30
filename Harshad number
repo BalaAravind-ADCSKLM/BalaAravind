@@ -1,0 +1,29 @@
+
+import java.util.Scanner;
+ 
+
+ class Harshad
+ {
+   public static void main(String args[])
+   { 
+   Scanner sc=new Scanner(System.in);
+   System.out.println("Enter a number:");
+   int x=sc.nextInt();
+   int temp=x;
+  int r,c=0;
+  while(x>0){
+    r=x%10;
+    c=c+r;
+    x=x/10;
+  }
+  if((temp%c)==0)
+     System.out.println(temp+" is an Harshad number");
+  else
+     System.out.println(temp+" is not an Harshad number");
+   }
+ }
+
+Output:
+Enter a number:
+156
+156 is an Harshad number
