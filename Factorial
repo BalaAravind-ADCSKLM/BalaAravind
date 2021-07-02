@@ -1,0 +1,35 @@
+import java.util.*;
+import java.math.*;
+
+
+
+ class factorial
+ {
+static BigInteger fact(int x){
+  if(x==0||x==1)
+  return BigInteger.ONE;
+  else
+  return BigInteger.valueOf(x).multiply(fact(x-1));
+}
+   
+   public static void main(String args[])
+   { 
+     
+    Scanner sc= new Scanner(System.in);
+    int test= sc.nextInt();
+    int a[]= new int[test];
+    for(int i=0;i<test;i++)
+    a[i]=sc.nextInt();
+    for(int i=0;i<test;i++)
+    System.out.println(fact(a[i]));
+    }
+   }
+ 
+Output:
+3
+20
+24
+34
+2432902008176640000
+620448401733239439360000
+295232799039604140847618609643520000000
