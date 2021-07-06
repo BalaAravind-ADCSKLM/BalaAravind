@@ -1,0 +1,44 @@
+
+import java.util.*;
+class oddnumbersinarray
+{
+public static void main(String arg[])
+{
+  Scanner sc = new Scanner(System.in);
+  System.out.println("Enter size of array");
+  int t=sc.nextInt();
+int a[]=new int[t];
+System.out.println("Enter array elements");
+for(int i=0;i<t;i++)
+a[i]=sc.nextInt();
+System.out.println("You're array is:");
+for(int i:a)
+System.out.print(i+" ");
+Arrays.sort(a);
+System.out.println("\n odd elements are:");
+for(int i=0;i<t;i++){
+  if(a[i]%2!=0)
+  System.out.println(a[i]);
+}
+}
+}
+
+Output:
+Enter size of array
+8
+Enter array elements
+2
+54
+65
+35
+27
+8
+90
+67
+You're array is:
+2 54 65 35 27 8 90 67 
+ odd elements are:
+27
+35
+65
+67
