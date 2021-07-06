@@ -1,0 +1,28 @@
+import java.util.*;
+
+ class second_largest
+ {
+   public static void main(String args[])
+   { 
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter size of array");
+    int t=sc.nextInt();
+    int a[]= new int[t];
+    System.out.println("Enter array elements");
+    for(int i=0;i<t;i++)
+    a[i]=sc.nextInt();
+    Arrays.sort(a);
+    System.out.println("second largest element:"+a[t-2]);
+   }
+ }
+
+Output:
+Enter size of array
+5
+Enter array elements
+34
+65
+23
+987
+26
+second largest element:65
