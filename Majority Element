@@ -1,0 +1,31 @@
+class Solution
+{
+ public int majorityElement(int[] nums)
+ {
+  int num=0,n=nums.length;
+  for(int i=0;i<n;i++)
+  {
+    int c=0;
+    for(int j=0;j<n;j++)
+    {
+     if(nums[i]==nums[j])
+      c++;
+    }
+   if(c>=n/2 && n%2==0)
+    {
+      num=nums[i];
+      break;
+    } 
+   else if(c>=(n/2)+1 && n%2==1)
+   {
+     num=nums[i];
+      break;
+   }
+  } 
+  return num;
+ }
+}
+
+Output: It's a leetcode problem and we didn't mentioned
+any main method here as it is saved by default in
+problem 
