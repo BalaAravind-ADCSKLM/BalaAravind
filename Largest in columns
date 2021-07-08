@@ -1,0 +1,36 @@
+import java.util.*;
+
+ class largest_in_column
+ {
+   public static void main(String args[])
+   { 
+    Scanner sc= new Scanner(System.in);
+    System.out.println("Enter rows and columns");
+    int r=sc.nextInt(), c=sc.nextInt();
+    int a[][]= new int [r][c];
+    System.out.println("Enter elements");
+    for(int i=0;i<r;i++){
+      for(int j=0;j<c;j++)
+      a[i][j]=sc.nextInt();
+    }
+    for(int j=0;j<c;j++){
+      int l=a[0][j];
+      for(int i=0;i<r;i++){
+        if(a[i][j]>l)
+        l=a[i][j];
+      }
+      System.out.println("largest value in "+(j+1)+":"+l);
+    }
+   }
+ }
+
+Output:
+Enter rows and columns
+3 3
+Enter elements
+1 25 3
+34 5 7
+4 23 91
+largest value in 1:34
+largest value in 2:25
+largest value in 3:91
