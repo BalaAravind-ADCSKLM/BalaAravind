@@ -1,0 +1,35 @@
+import java.util.*;
+ class difference 
+ {
+   public static void main(String args[])
+   { 
+    Scanner sc= new Scanner(System.in);
+    System.out.println("Enter rows and columns");
+    int r=sc.nextInt(),c=sc.nextInt();
+    int a[][]= new int[r][c];
+    System.out.println("Enter array values");
+    for(int i=0;i<r;i++){
+      for(int j=0;j<c;j++)
+      a[i][j]=sc.nextInt();
+    }
+    int d=0,ad=0;
+   for(int i=0;i<r;i++){
+      
+        d=d+a[i][i];
+        
+      
+      ad=ad+a[i][c-1-i];
+      }
+      
+    System.out.println("Difference is: "+(d-ad));
+   }
+ }
+
+Output:
+Enter rows and columns
+3 3
+Enter array values
+2 4 9
+1 5 7
+0 3 6
+Difference is: -1
