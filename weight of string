@@ -1,0 +1,28 @@
+import java.util.*;
+ class weight
+ {
+   public static void main(String args[])
+   { 
+    Scanner sc = new Scanner(System.in);
+    String s= new String();
+    s=sc.nextLine();
+    int x=0,sum=0;
+    for(int i=0;i<s.length();i++){
+      char ch= s.charAt(i);
+     char Char= Character.toUpperCase(ch);
+       x= (int)Char;
+      if(x>=65 && x<=90)
+      {
+        if(x==65||x==69||x==73||x==79||x==85)
+        sum=sum+0;
+        else
+        sum=sum+(x-64);
+      }
+    }
+    System.out.println(sum);
+   }
+ }
+ 
+ output:
+ a b c d e
+ 9
