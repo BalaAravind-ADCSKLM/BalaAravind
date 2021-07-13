@@ -1,0 +1,34 @@
+import java.util.*;
+class words
+{
+public static void main(String args[])
+{
+Scanner sc= new Scanner(System.in);
+System.out.println("Enter a string");
+String st = new String();
+st=sc.nextLine();
+System.out.println("No.of Words in given string "+wordcount(st));
+}
+static int wordcount(String s)
+{
+char c[]= new char[s.length()];
+c=s.toCharArray();
+int l=c.length;
+int count;
+if(c[0]==' ')// to check whether first letter is space or not
+count =0;
+else
+count =1;
+for(int i=0;i<l;i++)
+{
+if((i<l-1)&&(c[i]==' ')&&(c[i+1]!=' '))
+count++;
+}
+return count;
+}
+}
+
+output:
+Enter a string
+    aravind  bala   student   of   aditya   degree    college
+No.of Words in given string 7
