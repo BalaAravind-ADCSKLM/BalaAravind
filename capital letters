@@ -1,0 +1,29 @@
+import java.util.*;
+class capital
+{
+public static void main(String args[])
+{
+Scanner sc= new Scanner(System.in);
+System.out.println("Enter a string");
+String s=sc.nextLine();
+char c[]= new char[s.length()];
+c=s.toCharArray();
+for(int i=0;i<c.length;i++)
+{
+  if(i==0)
+   c[i]=Character.toUpperCase(c[i]);
+  else if(c[i]==' ')
+   c[i+1]=Character.toUpperCase(c[i+1]);
+System.out.print(c[i]);
+}
+}
+}
+
+output:
+Enter a string
+aravind bala student of ADITYA deGREE college
+Aravind Bala Student Of ADITYA DeGREE College
+
+Enter a string
+aravind    bala
+Aravind    Bala
