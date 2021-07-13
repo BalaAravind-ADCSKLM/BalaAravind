@@ -1,0 +1,32 @@
+import java.util.*;
+class prime
+{
+public static void main(String args[])
+{
+Scanner sc= new Scanner(System.in);
+System.out.println("Enter a number");
+int num=sc.nextInt();
+System.out.println("prime numbers upto "+num);
+primeNos(num);
+}
+static void primeNos(int n)
+{
+for(int i=1;i<=n;i++)
+{
+int c=0;
+for (int j=2;j<i;j++)
+{
+if(i%j==0)
+c++;
+}
+if(c==0)
+System.out.print(i+" ");
+}
+}
+}
+
+output:
+Enter a number
+30
+prime numbers upto 30
+1 2 3 5 7 11 13 17 19 23 29
