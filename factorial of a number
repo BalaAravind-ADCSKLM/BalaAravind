@@ -1,0 +1,41 @@
+import java.util.*;
+import java.math.BigInteger;
+class factorial
+{
+public static void main(String args[])
+{
+Scanner sc= new Scanner(System.in);
+System.out.println("Enter a positive number");
+int num=sc.nextInt();
+if(num<0)
+System.out.println("invaild entry");
+else if(num==0)
+System.out.println("1");
+else
+System.out.println(display(num));
+}
+static BigInteger display(int n)
+{
+System.out.println("The factorial value of "+n+":"); 
+
+return fact(n);
+}
+static BigInteger fact(int f)
+{
+if(f==1)
+return BigInteger.ONE;
+else
+return BigInteger.valueOf(f).multiply(fact(f-1));
+}
+}
+
+output:
+Enter a positive number
+25
+The factorial value of 25:
+15511210043330985984000000
+
+Enter a positive number
+6
+The factorial value of 6:
+720
