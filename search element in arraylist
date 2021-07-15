@@ -1,0 +1,38 @@
+import java.util.*;
+class searchinlist
+{
+public static void main(String args[])
+{
+Scanner sc= new Scanner(System.in);
+ArrayList<Integer> a= new ArrayList<Integer>();
+System.out.println("Enter size of list");
+int l= sc.nextInt();
+System.out.println("Enter "+l+" elements");
+for(int i=1;i<=l;i++)
+a.add(sc.nextInt());
+System.out.println("Enter element to search:");
+int x= sc.nextInt();
+boolean b= searchl(a,x);
+if(b)
+System.out.println("Element found");
+else
+System.out.println("element not found");
+}
+static boolean searchl(ArrayList<Integer> al, int key)
+{
+for(int i=0;i<al.size();i++)
+{
+if(al.get(i)==key)
+return true;
+}
+return false;
+}
+}
+
+Enter size of list
+10
+Enter 10 elements
+11 12 23 34 45 56 67 78 90 18
+Enter element to search:
+67
+Element found
