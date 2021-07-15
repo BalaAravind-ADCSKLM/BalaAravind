@@ -1,0 +1,29 @@
+class Solution {
+    public int[] sortArrayByParityII(int[] nums) {
+        ArrayList<Integer> e= new ArrayList<Integer>();//to store even elements
+        ArrayList<Integer> o= new ArrayList<Integer>();//to store odd elements
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]%2==0)
+                e.add(nums[i]);
+            else
+                o.add(nums[i]);
+        }
+        int res[]= new int[nums.length];
+            int j=0,k=0;
+            for(int i=0;i<nums.length;i++){
+            if(i%2==0){
+              res[i]=e.get(j);
+                j++;
+                }
+                else{
+                res[i]=o.get(k);
+                    k++;
+                }    
+        }
+            return res;
+        
+    }
+}
+
+output:
+It's a leetcode problem.
