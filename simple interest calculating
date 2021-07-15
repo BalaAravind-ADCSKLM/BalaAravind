@@ -1,0 +1,30 @@
+import java.util.*;
+class simpleinterest
+{
+public static void main(String args[])
+{
+Scanner sc= new Scanner(System.in);
+System.out.println("enter principal amount:");
+float p= sc.nextFloat();
+System.out.println("Enter time(in months):");
+float t=sc.nextFloat();
+System.out.println("Enter rate of interest(per month)");
+float r= sc.nextFloat();
+float i= si(p,t,r);
+System.out.println("The interest is:"+i);
+}
+static float si(float pr, float time, float rate)
+{
+return ((pr*time*rate)/100);
+}
+}
+
+output:
+
+enter principal amount:
+10000.00
+Enter time(in months):
+5.00
+Enter rate of interest(per month)
+1.25
+The interest is:625.0
