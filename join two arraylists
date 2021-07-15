@@ -1,0 +1,46 @@
+import java.util.*;
+class joinarraylists
+{
+public static void main(String ar[])
+{
+Scanner sc= new Scanner(System.in);
+System.out.println("Enter size for first list:");
+int l1= sc.nextInt();
+ArrayList<Integer> a= new ArrayList<Integer>();
+ArrayList<Integer> b= new ArrayList<Integer>();
+System.out.println("Enter elements in first list:");
+for(int i=0;i<l1;i++)
+a.add(sc.nextInt());
+System.out.println("Enter size of second list:");
+int l2= sc.nextInt();
+System.out.println("Enter elements for second list");
+for(int j=0;j<l2;j++)
+b.add(sc.nextInt());
+ArrayList<Integer> r=joinlists(a,b);
+System.out.println("The combination of two lists is:");
+for(int i=0;i<(l1+l2);i++)
+System.out.print(r.get(i)+" ");
+}
+static ArrayList<Integer> joinlists(ArrayList<Integer> first, ArrayList<Integer> second)
+{
+ArrayList<Integer> res = new ArrayList<Integer>();
+res.addAll(first);
+res.addAll(second);
+return res;
+}
+}
+
+output:
+Enter size for first list:
+5
+Enter elements in first list:
+10 20 30 40 50
+Enter size of second list:
+7
+Enter elements for second list
+11
+12
+13
+14 15 16 17
+The combination of two lists is:
+10 20 30 40 50 11 12 13 14 15 16 17
