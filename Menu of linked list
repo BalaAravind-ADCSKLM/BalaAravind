@@ -1,0 +1,140 @@
+import javax.swing.*;
+import java.util.LinkedList;
+import java.util.Scanner;
+
+public class menuoflinkedlist {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        LinkedList<Integer> ld = new LinkedList<Integer>();
+        while (true) {
+            System.out.println("1.Begin Insert");
+            System.out.println("2.End Insert");
+            System.out.println("3.Position insert");
+            System.out.println("4.Begin Delete");
+            System.out.println("5.End Delete");
+            System.out.println("6.Position Delete");
+            System.out.println("7.Display");
+            System.out.println("8.Exit");
+            System.out.println("enter your choice");
+            int ch = sc.nextInt();
+            if ((ch > 0) && (ch < 8)) {
+                switch (ch) {
+                    case 1:
+                        System.out.println("Enter a value to insert:");
+                        int begin = sc.nextInt();
+                        ld.addFirst(begin);
+                        break;
+                    case 2:
+                        System.out.println("Enter a value to insert at last");
+                        int end = sc.nextInt();
+                        ld.addLast(end);
+                        break;
+                    case 3:
+                        System.out.println("Enter index and value to insert");
+                        int ind= sc.nextInt(),val= sc.nextInt();
+                        ld.add(ind,val);
+                        break;
+                    case 4:
+                        ld.removeFirst();
+                        break;
+                    case 5:
+                        ld.removeLast();
+                        break;
+                    case 6:
+                        System.out.println("Enter the index to remove element");
+                        int ind1=sc.nextInt();
+                        ld.remove(ind1);
+                        break;
+                    case 7:
+                        System.out.println(ld);
+                        break;
+                }
+
+            }
+            else
+                break;
+        }
+    }
+}
+
+output:
+
+1.Begin Insert
+2.End Insert
+3.Position insert
+4.Begin Delete
+5.End Delete
+6.Position Delete
+7.Display
+8.Exit
+enter your choice
+1
+Enter a value to insert:
+10
+1.Begin Insert
+2.End Insert
+3.Position insert
+4.Begin Delete
+5.End Delete
+6.Position Delete
+7.Display
+8.Exit
+enter your choice
+1
+Enter a value to insert:
+20
+1.Begin Insert
+2.End Insert
+3.Position insert
+4.Begin Delete
+5.End Delete
+6.Position Delete
+7.Display
+8.Exit
+enter your choice
+2
+Enter a value to insert at last
+30
+1.Begin Insert
+2.End Insert
+3.Position insert
+4.Begin Delete
+5.End Delete
+6.Position Delete
+7.Display
+8.Exit
+enter your choice
+3
+Enter index and value to insert
+1 40
+1.Begin Insert
+2.End Insert
+3.Position insert
+4.Begin Delete
+5.End Delete
+6.Position Delete
+7.Display
+8.Exit
+enter your choice
+4
+1.Begin Insert
+2.End Insert
+3.Position insert
+4.Begin Delete
+5.End Delete
+6.Position Delete
+7.Display
+8.Exit
+enter your choice
+7
+[40, 10, 30]
+1.Begin Insert
+2.End Insert
+3.Position insert
+4.Begin Delete
+5.End Delete
+6.Position Delete
+7.Display
+8.Exit
+enter your choice
+8
