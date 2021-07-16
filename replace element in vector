@@ -1,0 +1,43 @@
+import java.util.Scanner;
+import java.util.Vector;
+
+public class replaceelementinvector
+{
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter size of vector");
+        int n= sc.nextInt();
+        Vector v= new Vector(n);
+        System.out.println("Enter "+n+" values");
+        for(int i=0;i<n;i++)
+            v.add(sc.nextInt());
+        System.out.println("Enter the value and modification value");
+        int val=sc.nextInt(),mod=sc.nextInt();
+        if(v.contains(val)){
+            v.set(v.indexOf(val), mod);
+            System.out.println(v);
+        }
+        else
+            System.out.println("false");
+
+    }
+
+}
+
+output:
+
+Enter size of vector
+5
+Enter 5 values
+10 20 30 40 50
+Enter the value and modification value
+50 70098
+[10, 20, 30, 40, 70098]
+
+Enter size of vector
+5
+Enter 5 values
+10 20 30 40 50
+Enter the value and modification value
+70 30
+false
