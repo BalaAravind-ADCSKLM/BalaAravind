@@ -1,0 +1,31 @@
+import java.util.LinkedList;
+import java.util.Scanner;
+
+public class deleteelementinlinkedlist {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter size of linked list");
+        int n = sc.nextInt();
+        LinkedList<Integer> l = new LinkedList<Integer>();
+        System.out.println("Enter the values ");
+        for (int i = 0; i < n; i++)
+            l.add(sc.nextInt());
+        System.out.println("Enter the value to delete");
+        int del = sc.nextInt();
+       if(l.contains(del)){
+           l.remove(l.indexOf(del));
+           System.out.println("List after deletion "+l);
+       }
+       else
+           System.out.println(del+" not found");
+    }
+}
+
+output:
+enter size of linked list
+5
+Enter the values 
+10 20 30 40 50
+Enter the value to delete
+30
+List after deletion [10, 20, 40, 50]
