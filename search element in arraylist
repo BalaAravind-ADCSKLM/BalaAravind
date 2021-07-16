@@ -20,14 +20,11 @@ System.out.println("element not found");
 }
 static boolean searchl(ArrayList<Integer> al, int key)
 {
-for(int i=0;i<al.size();i++)
-{
-if(al.get(i)==key)
-return true;
-}
-return false;
+return al.contains(key);
 }
 }
+ 
+
 
 Enter size of list
 10
