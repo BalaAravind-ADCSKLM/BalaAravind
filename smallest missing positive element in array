@@ -1,0 +1,21 @@
+class Solution {
+    public int firstMissingPositive(int[] nums) {
+        TreeSet<Integer> ts= new TreeSet<Integer>();
+        for(int i: nums){
+            ts.add(i);
+        }
+        int c;
+      for( c=1;c<=ts.last();c++){
+          if(ts.contains(c)==false){
+              break;
+          }
+          else if(c==ts.last()){
+              c++;
+              break;
+          }
+      }
+   return c;     
+    }
+}
+
+output: It's a leetcode problem.
