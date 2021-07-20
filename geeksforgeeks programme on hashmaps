@@ -1,0 +1,16 @@
+class Solution{
+    static int map(int n, String keys[], int arr[], String s)
+    {
+      HashMap<String,Integer> hs = new HashMap<String,Integer>();
+     for(int i=0;i<n;i++)
+     {
+         hs.put(keys[i],arr[i]);
+     }
+     if(hs.containsKey(s))
+     return hs.get(s);
+     else
+     return -1;
+    }
+}
+
+output: It's a geeksforgeeks problem
