@@ -1,0 +1,65 @@
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class menuprogrammeofhashmap {
+    static HashMap<Integer,Integer>  hs= new HashMap<Integer,Integer>();
+    static Scanner sc= new Scanner(System.in);
+
+    public static void main(String[] args) {
+
+        System.out.println("Enter how many operations you want to perform");
+        int n= sc.nextInt();
+        System.out.println("a) adds an entry with key x and value y in hashmap");
+        System.out.println("b) prints value of key x");
+        System.out.println("c) prints size of hashmap");
+        System.out.println("d) remove value of key x");
+        for(int i=1;i<=n;i++) {
+            char c = sc.next().charAt(0);
+            switch (c) {
+                case 'a':
+                    addentry();
+                    break;
+                case 'b':
+                    printvalue();
+                    break;
+                case 'c':
+                    sizeofmap();
+                    break;
+                case 'd':
+                    removevalue();
+                    break;
+                default:
+                    System.out.println("Invalid entry");
+            }
+
+        }
+    }
+    static void addentry(){
+        int k=sc.nextInt(),v= sc.nextInt();
+        hs.put(k,v);
+    }
+    static void printvalue(){
+        int k= sc.nextInt();
+        if(hs.containsKey(k))
+            System.out.print(hs.get(k)+" ");
+        else
+            System.out.print("-1 ");
+    }
+    static void sizeofmap(){
+        System.out.print(hs.size()+" ");
+    }
+   static void removevalue(){
+        int k= sc.nextInt();
+        hs.remove(k);
+    }
+
+}
+
+Enter how many operations you want to perform
+5
+a) adds an entry with key x and value y in hashmap
+b) prints value of key x
+c) prints size of hashmap
+d) remove value of key x
+a 1 2 a 66 3 b 66 d 1 c
+3 1 
