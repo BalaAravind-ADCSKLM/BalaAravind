@@ -1,0 +1,36 @@
+import java.util.Scanner;
+import java.util.Stack;
+
+public class removeoddsinstack {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter size of array");
+        int n=sc.nextInt();
+        int a[]= new int[n];
+        Stack<Integer> st= new Stack<Integer>();
+        System.out.println("Enter elements");
+        for(int i=0;i<n;i++){
+            a[i]=sc.nextInt();
+            st.push(a[i]);
+        }
+        System.out.println("Even elements are:");
+        removeodds(st,n);
+    }
+    static void removeodds(Stack<Integer> st1,int n){
+        for(Integer i: st1){
+            if(i%2==0)
+                System.out.print(i+" ");
+
+        }
+
+    }
+}
+
+output:
+Enter size of array
+6
+Enter elements
+1 2 3 4 5 7
+Even elements are:
+2 4 
+
