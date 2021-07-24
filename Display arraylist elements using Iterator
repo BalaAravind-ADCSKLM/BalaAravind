@@ -1,0 +1,36 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class displayarraylistelementsusingiterator {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter size of array");
+        int n=sc.nextInt();
+        String arr[]= new String[n];
+        ArrayList al=new ArrayList();
+        System.out.println("Enter elements in array");
+        for(int i=0;i<n;i++)
+            arr[i]=sc.next();
+        System.out.println("Displaying elements using Iterator");
+        for(int i=0;i<n;i++)
+            al.add(arr[i]);
+        Iterator it= al.iterator();
+        while(it.hasNext()){
+            String i=(String)it.next();
+            System.out.print(i+",");
+        }
+    }
+}
+
+output:
+Enter size of array
+5
+Enter elements in array
+aditya
+adc@sklm123
+688.0009700
+24587
+<>(){}[]
+Displaying elements using Iterator
+aditya,adc@sklm123,688.0009700,24587,<>(){}[],
