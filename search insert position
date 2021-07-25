@@ -1,0 +1,22 @@
+class Solution {
+    public int searchInsert(int[] nums, int target) {
+        int res=nums.length;
+        for (int i = 0; i < nums.length; i++)
+        {
+            if (target == nums[i])
+            {
+                 res=i;
+                break;
+            }
+            else if (target<nums[i])
+            {
+                 res=i;
+                break;
+            }
+        }
+            
+        return res;
+    }
+}
+
+output: its a leetcode problem
