@@ -1,0 +1,9 @@
+class Solution {
+    static String conRevstr(String S1, String S2) {
+        StringBuffer SB= new StringBuffer(S1.concat(S2)) ;
+       String S= new String(SB.reverse()) ;
+       return S;
+    }
+}
+
+output: its a geeksforgeeks problem.
