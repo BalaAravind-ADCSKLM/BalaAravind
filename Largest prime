@@ -1,0 +1,41 @@
+import java.util.Scanner;
+public class maxprime {
+    static int num=100000;
+    static boolean arr[]=new boolean[num+1];
+    static void sieve() {
+        for (int i = 0; i <= num; i++)
+            arr[i]=true;
+        arr[0]=false;
+        arr[1]=false;
+        for(int i=2;i*i<=num;i++){
+            if(arr[i]){
+                for(int j=i*i;j<=num;j+=i)
+                    arr[j]=false;
+            }
+        }
+    }
+    public static void main(String[] args) {
+        int max;
+        max = Integer.MIN_VALUE;
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter array length");
+        int n=sc.nextInt();
+        System.out.println("Enter array values");
+        int array[]=new int[n];
+        for(int i=0;i<n;i++)
+        array[i]=sc.nextInt();
+        sieve();
+        for(int i=0;i<n;i++){
+            if(array[i]>max && arr[array[i]])
+                max=array[i];
+        }
+        System.out.println("Largest prime:"+max);
+    }
+}
+
+output:
+Enter array length
+5
+Enter array values
+12 24 23 56 79
+Largest prime:79
