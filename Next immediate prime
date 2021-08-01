@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class nextprime{
+    static int num=100000;
+    static  boolean prime[]=new boolean[num+1];
+    static void seive()
+    {
+        for(int i=0;i<=num;i++)
+            prime[i]=true;
+        prime[0]=false;
+        prime[1]=false;
+        for(int i=2;i*i<=num;i++){
+            if(prime[i]) {
+                for (int j=i * i; j<num; j+= i)
+                    prime[j] = false;
+            }
+        }
+    }
+    public static void main(String arg[])
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number:");
+        int n = sc.nextInt();
+        seive();
+        for (int i=n;i<=num;i++){
+            if(prime[n]){
+                System.out.println("next prime is "+n);
+                return;
+            }
+            n++;
+        }
+    }
+}
+
+output:
+Enter a number:
+121
+next prime is 127
