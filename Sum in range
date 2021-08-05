@@ -13,7 +13,7 @@ public class suminrange {
         else if(L==0 || R==n)
             System.out.println("Insufficient L,R values");
     }
-    public static void main(String[] ar) {
+    public static void main(String arg[]) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter size of array:");
         n = sc.nextInt();
