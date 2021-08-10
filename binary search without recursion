@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class binarysearch {
@@ -9,6 +10,7 @@ public class binarysearch {
         System.out.println("Enter array elements");
         for(int i=0;i<n;i++)
             arr[i]=sc.nextInt();
+        Arrays.sort(arr);
         System.out.println("Enter key");
         int k=sc.nextInt();
         binary(k,arr);
@@ -19,7 +21,7 @@ public class binarysearch {
        while(low<=high){
            int mid=(low+high)/2;
            if(arr[mid]==k){
-               System.out.println(k+" found at index "+mid);
+               System.out.println(k+" found");
                return;
            }
            else if(k<arr[mid])
@@ -30,7 +32,6 @@ public class binarysearch {
         System.out.println(k+" not found");
     }
 }
-
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 output:
 Enter array size
@@ -44,7 +45,8 @@ Enter key
 Enter array size
 5
 Enter array elements
-2 4 6 8 10
+12 68 23 57 89
 Enter key
-12
-12 not found
+57
+57 found
+
